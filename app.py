@@ -17,5 +17,8 @@ ret = api_client.list_namespaced_pod("fed-repl-mjh", watch=False)
 
 print("Listing pods with their IPs:")
 
+
+
 for i in ret.items:
+    print(i)
     print(f"{i.status.pod_ip}\t{i.metadata.name}")
